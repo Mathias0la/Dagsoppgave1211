@@ -14,22 +14,19 @@ console.log(splitText("Hello World"))
 //Bruk toUpperCase() og toLowerCase()
 
 //Funksjon som returnerer text input i uppercase om verdien på num1 er lik 5 eller under, om den er over 6 vil teksten komme ut i LowerCase
-function bigOrSmall(num1,text) {
-    if(num1 <=5){
-        console.log(num1, text.toUpperCase())
-    } else if (num1 >=6) {
-        console.log(num1, text.toLowerCase())
+function bigOrSmall(boolean,text) {
+    if(boolean === true){
+        console.log(text.toUpperCase())
+    } else if (boolean === false) {
+        console.log(text.toLowerCase())
     } else {
      console.log("ERROR")
     }
 }
 
-bigOrSmall(200,"Hei dette er en tekst")//Returnerer teksten i lowercase
-bigOrSmall(6,"Hei dette er en tekst")//Returnerer teksten i Lowercase
-bigOrSmall(0,"Hei dette er en tekst")//Returnerer teksten i Uppercase
-bigOrSmall(2,"Hei dette er en tekst")//Returnerer teksten i Uppercase
-bigOrSmall(3,"Hei dette er en tekst")//Returnerer teksten i Uppercase
-bigOrSmall(5,"Hei dette er en tekst")//Returnerer teksten i Uppercase
+bigOrSmall(true,"Hei dette er en tekst")//Returnerer teksten i upperCase
+bigOrSmall(false,"Hei dette er en tekst")//Returnerer teksten i LowerCase
+
 
 //3. Lag en funksjon som tar inn en tekst som inneholder dag i uken. Funksjonen skal bruke en switch til å skrive ut forskjellge tekster basert på parameter.
 //Funksjon som sjekker hvilken dag det er, satt toLowerCase på day inni switch for at input skal matche uten å måtte være case sensitive.
@@ -49,13 +46,13 @@ function daysOfWeek(day) {
             return "Det er Torsdag i dag"
         break;
         case "fredag":
-            return "Det er Fredag i dag"
+            return "Det er Fredag i dag, endelig helg"
         break;
         case "lørdag":
             return "Det er Lørdag i dag"
         break;
         case "søndag":
-            return "Det er Søndag i dag"
+            return "Det er Søndag i dag, uken er snart over"
         break;
         default:
           return  "Invalid input"
