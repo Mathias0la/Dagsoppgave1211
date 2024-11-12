@@ -13,7 +13,7 @@ console.log(splitText("Hello World"))
 //2. Lag en funksjon som tar inn en tekst og en boolean. Basert på verdien i boolean'en skal den enten returnere teksten med store eller små bokstaver.
 //Bruk toUpperCase() og toLowerCase()
 
-//Funksjon som returnerer text input i uppercase om verdien på num1 er lik 5 eller under, om den er over 6 vil teksten komme ut i LowerCase
+//Funksjon som returnerer text input som enten lowercase eller uppercase basert på om boolean viser true eller false
 function bigOrSmall(boolean,text) {
     if(boolean === true){
         console.log(text.toUpperCase())
